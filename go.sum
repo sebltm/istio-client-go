@@ -103,8 +103,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
 github.com/rogpeppe/fastuuid v1.2.0/go.mod h1:jVj6XXZzXRy/MSR5jhDC/2q6DgLz+nrA6LYCDYWNEvQ=
-github.com/sebltm/api v0.0.0-20230109154040-b8c5c0bceb58 h1:Ec8hmPLz9uw9I9bwyfpgqtatyxPcXYNckmaFWwzq6tM=
-github.com/sebltm/api v0.0.0-20230109154040-b8c5c0bceb58/go.mod h1:+IPBhFYUZBqH7ATQoxMCu1MGEbtQ+C29exvSGYGOWpI=
+github.com/sebltm/api v0.0.0-20230110171621-3afdaaf8064c h1:zFlE2qJcq7xP2eVrLMKMRY83pzerXv+2nqFYjqj+ris=
+github.com/sebltm/api v0.0.0-20230110171621-3afdaaf8064c/go.mod h1:hQkF0Q19MCmfOTre/Sg4KvrwwETq45oaFplnBm2p4j8=
 github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
 github.com/spf13/pflag v1.0.5 h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
 github.com/spf13/pflag v1.0.5/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An2Bg=
