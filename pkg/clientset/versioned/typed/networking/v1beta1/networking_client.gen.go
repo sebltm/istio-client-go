@@ -28,6 +28,7 @@ type NetworkingV1beta1Interface interface {
 	RESTClient() rest.Interface
 	DestinationRulesGetter
 	GatewaysGetter
+	OCSPStaplesGetter
 	ProxyConfigsGetter
 	ServiceEntriesGetter
 	SidecarsGetter
@@ -47,6 +48,10 @@ func (c *NetworkingV1beta1Client) DestinationRules(namespace string) Destination
 
 func (c *NetworkingV1beta1Client) Gateways(namespace string) GatewayInterface {
 	return newGateways(c, namespace)
+}
+
+func (c *NetworkingV1beta1Client) OCSPStaples(namespace string) OCSPStapleInterface {
+	return newOCSPStaples(c, namespace)
 }
 
 func (c *NetworkingV1beta1Client) ProxyConfigs(namespace string) ProxyConfigInterface {

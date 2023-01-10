@@ -38,6 +38,10 @@ func (c *FakeNetworkingV1alpha3) Gateways(namespace string) v1alpha3.GatewayInte
 	return &FakeGateways{c, namespace}
 }
 
+func (c *FakeNetworkingV1alpha3) OCSPStaples(namespace string) v1alpha3.OCSPStapleInterface {
+	return &FakeOCSPStaples{c, namespace}
+}
+
 func (c *FakeNetworkingV1alpha3) ServiceEntries(namespace string) v1alpha3.ServiceEntryInterface {
 	return &FakeServiceEntries{c, namespace}
 }

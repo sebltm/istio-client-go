@@ -34,6 +34,10 @@ func (c *FakeNetworkingV1beta1) Gateways(namespace string) v1beta1.GatewayInterf
 	return &FakeGateways{c, namespace}
 }
 
+func (c *FakeNetworkingV1beta1) OCSPStaples(namespace string) v1beta1.OCSPStapleInterface {
+	return &FakeOCSPStaples{c, namespace}
+}
+
 func (c *FakeNetworkingV1beta1) ProxyConfigs(namespace string) v1beta1.ProxyConfigInterface {
 	return &FakeProxyConfigs{c, namespace}
 }

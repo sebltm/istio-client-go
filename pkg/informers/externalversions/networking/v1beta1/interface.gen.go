@@ -26,6 +26,8 @@ type Interface interface {
 	DestinationRules() DestinationRuleInformer
 	// Gateways returns a GatewayInformer.
 	Gateways() GatewayInformer
+	// OCSPStaples returns a OCSPStapleInformer.
+	OCSPStaples() OCSPStapleInformer
 	// ProxyConfigs returns a ProxyConfigInformer.
 	ProxyConfigs() ProxyConfigInformer
 	// ServiceEntries returns a ServiceEntryInformer.
@@ -59,6 +61,11 @@ func (v *version) DestinationRules() DestinationRuleInformer {
 // Gateways returns a GatewayInformer.
 func (v *version) Gateways() GatewayInformer {
 	return &gatewayInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// OCSPStaples returns a OCSPStapleInformer.
+func (v *version) OCSPStaples() OCSPStapleInformer {
+	return &oCSPStapleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // ProxyConfigs returns a ProxyConfigInformer.

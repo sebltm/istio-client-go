@@ -28,6 +28,8 @@ type Interface interface {
 	EnvoyFilters() EnvoyFilterInformer
 	// Gateways returns a GatewayInformer.
 	Gateways() GatewayInformer
+	// OCSPStaples returns a OCSPStapleInformer.
+	OCSPStaples() OCSPStapleInformer
 	// ServiceEntries returns a ServiceEntryInformer.
 	ServiceEntries() ServiceEntryInformer
 	// Sidecars returns a SidecarInformer.
@@ -64,6 +66,11 @@ func (v *version) EnvoyFilters() EnvoyFilterInformer {
 // Gateways returns a GatewayInformer.
 func (v *version) Gateways() GatewayInformer {
 	return &gatewayInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// OCSPStaples returns a OCSPStapleInformer.
+func (v *version) OCSPStaples() OCSPStapleInformer {
+	return &oCSPStapleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // ServiceEntries returns a ServiceEntryInformer.

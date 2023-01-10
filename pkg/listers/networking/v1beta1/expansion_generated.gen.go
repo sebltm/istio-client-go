@@ -32,6 +32,14 @@ type GatewayListerExpansion interface{}
 // GatewayNamespaceLister.
 type GatewayNamespaceListerExpansion interface{}
 
+// OCSPStapleListerExpansion allows custom methods to be added to
+// OCSPStapleLister.
+type OCSPStapleListerExpansion interface{}
+
+// OCSPStapleNamespaceListerExpansion allows custom methods to be added to
+// OCSPStapleNamespaceLister.
+type OCSPStapleNamespaceListerExpansion interface{}
+
 // ProxyConfigListerExpansion allows custom methods to be added to
 // ProxyConfigLister.
 type ProxyConfigListerExpansion interface{}

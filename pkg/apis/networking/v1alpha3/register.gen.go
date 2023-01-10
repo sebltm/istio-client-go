@@ -47,6 +47,8 @@ func addKnownTypes(scheme *runtime.Scheme) error {
 		&EnvoyFilterList{},
 		&Gateway{},
 		&GatewayList{},
+		&OCSPStaple{},
+		&OCSPStapleList{},
 		&ServiceEntry{},
 		&ServiceEntryList{},
 		&Sidecar{},

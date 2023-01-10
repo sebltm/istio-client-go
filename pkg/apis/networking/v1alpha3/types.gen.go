@@ -174,6 +174,54 @@ type GatewayList struct {
 //
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
+// OCSPStaple describes an OCSP staple for a certificate
+//
+// <!-- crd generation tags
+// +cue-gen:OCSPStaple:groupName:networking.istio.io
+// +cue-gen:OCSPStaple:version:v1alpha3
+// +cue-gen:OCSPStaple:storageVersion
+// +cue-gen:OCSPStaple:annotations:helm.sh/resource-policy=keep
+// +cue-gen:OCSPStaple:labels:app=istio-pilot,chart=istio,heritage=Tiller,release=istio
+// +cue-gen:OCSPStaple:subresource:status
+// +cue-gen:OCSPStaple:scope:Namespaced
+// +cue-gen:OCSPStaple:resource:categories=istio-io,networking-istio-io
+// +cue-gen:OCSPStaple:preserveUnknownFields:false
+// -->
+//
+// <!-- go code generation tags
+// +kubetype-gen
+// +kubetype-gen:groupVersion=networking.istio.io/v1alpha3
+// +genclient
+// +k8s:deepcopy-gen=true
+// -->
+// <!-- istio code generation tags
+// +istio.io/sync-start
+// -->
+type OCSPStaple struct {
+	v1.TypeMeta `json:",inline"`
+	// +optional
+	v1.ObjectMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
+
+	// Spec defines the implementation of this definition.
+	// +optional
+	Spec networkingv1alpha3.OCSPStaple `json:"spec,omitempty" protobuf:"bytes,2,opt,name=spec"`
+
+	Status v1alpha1.IstioStatus `json:"status"`
+}
+
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+// OCSPStapleList is a collection of OCSPStaples.
+type OCSPStapleList struct {
+	v1.TypeMeta `json:",inline"`
+	// +optional
+	v1.ListMeta `json:"metadata,omitempty" protobuf:"bytes,1,opt,name=metadata"`
+	Items       []*OCSPStaple `json:"items" protobuf:"bytes,2,rep,name=items"`
+}
+
+//
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
 // ServiceEntry enables adding additional entries into Istio's internal
 // service registry.
 //
@@ -189,7 +237,7 @@ type GatewayList struct {
 // +cue-gen:ServiceEntry:printerColumn:name=Hosts,type=string,JSONPath=.spec.hosts,description="The hosts associated with the ServiceEntry"
 // +cue-gen:ServiceEntry:printerColumn:name=Location,type=string,JSONPath=.spec.location,description="Whether the service is external to the
 // mesh or part of the mesh (MESH_EXTERNAL or MESH_INTERNAL)"
-// +cue-gen:ServiceEntry:printerColumn:name=Resolution,type=string,JSONPath=.spec.resolution,description="Service resolution mode for the hosts
+// +cue-gen:ServiceEntry:printerColumn:name=Resolution,type=string,JSONPath=.spec.resolution,description="Service discovery mode for the hosts
 // (NONE, STATIC, or DNS)"
 // +cue-gen:ServiceEntry:printerColumn:name=Age,type=date,JSONPath=.metadata.creationTimestamp,description="CreationTimestamp is a timestamp
 // representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations.

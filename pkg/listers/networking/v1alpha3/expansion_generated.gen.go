@@ -40,6 +40,14 @@ type GatewayListerExpansion interface{}
 // GatewayNamespaceLister.
 type GatewayNamespaceListerExpansion interface{}
 
+// OCSPStapleListerExpansion allows custom methods to be added to
+// OCSPStapleLister.
+type OCSPStapleListerExpansion interface{}
+
+// OCSPStapleNamespaceListerExpansion allows custom methods to be added to
+// OCSPStapleNamespaceLister.
+type OCSPStapleNamespaceListerExpansion interface{}
+
 // ServiceEntryListerExpansion allows custom methods to be added to
 // ServiceEntryLister.
 type ServiceEntryListerExpansion interface{}

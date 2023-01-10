@@ -22,6 +22,8 @@ type EnvoyFilterExpansion interface{}
 
 type GatewayExpansion interface{}
 
+type OCSPStapleExpansion interface{}
+
 type ServiceEntryExpansion interface{}
 
 type SidecarExpansion interface{}

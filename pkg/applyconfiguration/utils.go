@@ -57,6 +57,8 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &networkingv1alpha3.EnvoyFilterApplyConfiguration{}
 	case v1alpha3.SchemeGroupVersion.WithKind("Gateway"):
 		return &networkingv1alpha3.GatewayApplyConfiguration{}
+	case v1alpha3.SchemeGroupVersion.WithKind("OCSPStaple"):
+		return &networkingv1alpha3.OCSPStapleApplyConfiguration{}
 	case v1alpha3.SchemeGroupVersion.WithKind("ServiceEntry"):
 		return &networkingv1alpha3.ServiceEntryApplyConfiguration{}
 	case v1alpha3.SchemeGroupVersion.WithKind("Sidecar"):
@@ -73,6 +75,8 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &networkingv1beta1.DestinationRuleApplyConfiguration{}
 	case v1beta1.SchemeGroupVersion.WithKind("Gateway"):
 		return &networkingv1beta1.GatewayApplyConfiguration{}
+	case v1beta1.SchemeGroupVersion.WithKind("OCSPStaple"):
+		return &networkingv1beta1.OCSPStapleApplyConfiguration{}
 	case v1beta1.SchemeGroupVersion.WithKind("ProxyConfig"):
 		return &networkingv1beta1.ProxyConfigApplyConfiguration{}
 	case v1beta1.SchemeGroupVersion.WithKind("ServiceEntry"):

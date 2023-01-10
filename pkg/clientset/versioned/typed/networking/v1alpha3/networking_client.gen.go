@@ -29,6 +29,7 @@ type NetworkingV1alpha3Interface interface {
 	DestinationRulesGetter
 	EnvoyFiltersGetter
 	GatewaysGetter
+	OCSPStaplesGetter
 	ServiceEntriesGetter
 	SidecarsGetter
 	VirtualServicesGetter
@@ -51,6 +52,10 @@ func (c *NetworkingV1alpha3Client) EnvoyFilters(namespace string) EnvoyFilterInt
 
 func (c *NetworkingV1alpha3Client) Gateways(namespace string) GatewayInterface {
 	return newGateways(c, namespace)
+}
+
+func (c *NetworkingV1alpha3Client) OCSPStaples(namespace string) OCSPStapleInterface {
+	return newOCSPStaples(c, namespace)
 }
 
 func (c *NetworkingV1alpha3Client) ServiceEntries(namespace string) ServiceEntryInterface {
