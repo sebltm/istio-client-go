@@ -2,11 +2,11 @@ module istio.io/client-go
 
 go 1.18
 
-replace istio.io/api => github.com/sebltm/api v0.0.0-20230111114526-f04cd162cf54
+replace istio.io/api => ../api
 
 require (
-	istio.io/api v0.0.0-20230111120841-1a58c912bcb6
-	k8s.io/apimachinery v0.26.0
+	istio.io/api v0.0.0-00010101000000-000000000000
+	k8s.io/apimachinery v0.24.2
 	k8s.io/client-go v0.24.2
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3
 )
@@ -45,7 +45,7 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	k8s.io/api v0.26.0 // indirect
+	k8s.io/api v0.24.2 // indirect
 	k8s.io/klog/v2 v2.80.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20230106171958-10e5f0effbd2 // indirect
 	k8s.io/utils v0.0.0-20221128185143-99ec85e7a448 // indirect
