@@ -2,7 +2,7 @@ module istio.io/client-go
 
 go 1.18
 
-replace istio.io/api => ../api
+replace istio.io/api => github.com/sebltm/api v0.0.0-20230112111725-1538e9fa5eb8
 
 require (
 	istio.io/api v0.0.0-20230112111725-1538e9fa5eb8
