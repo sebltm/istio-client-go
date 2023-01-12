@@ -179,12 +179,11 @@ type GatewayList struct {
 // <!-- crd generation tags
 // +cue-gen:OCSPStaple:groupName:networking.istio.io
 // +cue-gen:OCSPStaple:version:v1alpha3
-// +cue-gen:OCSPStaple:storageVersion
 // +cue-gen:OCSPStaple:annotations:helm.sh/resource-policy=keep
 // +cue-gen:OCSPStaple:labels:app=istio-pilot,chart=istio,heritage=Tiller,release=istio
 // +cue-gen:OCSPStaple:subresource:status
 // +cue-gen:OCSPStaple:scope:Namespaced
-// +cue-gen:OCSPStaple:resource:categories=istio-io,networking-istio-io,shortNames=gw
+// +cue-gen:OCSPStaple:resource:categories=istio-io,networking-istio-io
 // +cue-gen:OCSPStaple:preserveUnknownFields:false
 // -->
 //
