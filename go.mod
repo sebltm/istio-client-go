@@ -5,7 +5,7 @@ go 1.18
 replace istio.io/api => github.com/sebltm/api v0.0.0-20230112111725-1538e9fa5eb8
 
 require (
-	istio.io/api v0.0.0-20230112111725-1538e9fa5eb8
+	istio.io/api v0.0.0-20230112113752-ce5dc7a81451
 	k8s.io/apimachinery v0.24.2
 	k8s.io/client-go v0.24.2
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.3
